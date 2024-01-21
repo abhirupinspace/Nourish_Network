@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>NGO Connect</title>
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="donate.js">
+</head>
+<body>
+    <header>
+        <h1>NGO Connect</h1>
+    </header>
+    <section id="ngo-list">
+        <!-- NGO listings will be displayed here -->
+    </section>
+    <section id="donation-form">
+        <h2>Make a Donation</h2>
+        <label for="donation-type">Donation Type:</label>
+        <select id="donation-type">
+            <option value="money">Money</option>
+            <option value="food">Food</option>
+        </select>
+        <label for="amount">Amount/Food Quantity:</label>
+        <input type="text" id="amount" placeholder="Enter amount or quantity">
+        <button onclick="makeDonation()">Donate</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
