@@ -1,138 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        main{background-color: white;}
-        h2{display: grid;place-items: center;color: red;padding: 5vmin;}
-        span.block{padding: 2vmax;display: flex;align-items: center;flex-direction: column;}
-        span.block>span{display: flex;flex-direction: row;width: 100vw;align-items: center;justify-content: center;padding: 5vw;}
-        span.block img{width: 35vw;}
-        span.block span.content{padding: 5vmax;}
-        button{
-            color: white;
-            background-color: rgb(0, 20, 50);
-            font-weight: 700;
-            padding: 5px;
-            border-radius: 20px;
-        }
-        .donate_methods{
-            display: grid;
-            grid-template-columns: 50vw 50vw;
-            grid-template-rows: 30vh 30vh;
-        }
-        .donate_methods>span{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: white;
-            padding: 5vmax;
-        }
-        .donate_methods>span:nth-child(1){background-color: orangered;}
-        .donate_methods>span:nth-child(2){background-color: rgb(0, 20, 50);}
-        .donate_methods>span:nth-child(3){background-color: rgb(0,100,20);}
-        .donate_methods>span:nth-child(4){background-color: rgb(200, 200, 50);}
-        main{display: flex;flex-direction: column;align-items: center;justify-content: center;}
-        main button{margin: 2vmax;padding: 1vmax;}
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+      main {
+        background-color: white;
+      }
+      h1 {
+        color: red;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+      h2{margin-bottom: 20px;}
+      main > h1 {
+        display: grid;
+        place-items: center;
+        padding-top: 50px;
+        margin-top: 50px;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        /* font-family: 'Nunito', sans-serif; */
+      }
+      span.block {
+        padding: 2vmax;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      span.block > span {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        padding: 5vw;
+      }
+      span.block img {
+        width: 35vw;
+      }
+      span.block span.content {
+        padding: 5vmax;
+        font-size: 25px;
+        text-align: center;
+      }
+      button {
+        color: white;
+        background-color: rgb(0, 20, 50);
+        font-weight: 700;
+        padding: 5px;
+        border-radius: 20px;
+      }
+      .donate_methods {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 30vh 30vh;
+      }
+      .donate_methods > span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        padding: 5vmax;
+      }
+      .donate_methods > span:nth-child(1) {
+        background-color: orangered;
+      }
+      .donate_methods > span:nth-child(2) {
+        background-color: rgb(0, 20, 50);
+      }
+      .donate_methods > span:nth-child(3) {
+        background-color: rgb(0, 100, 20);
+      }
+      .donate_methods > span:nth-child(4) {
+        background-color: rgb(200, 200, 50);
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      main button {
+        margin: 2vmax;
+        padding: 1vmax;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="logo_area">
-          <div id="logo"></div>
-          <a href="index.html" class="title"><h3>Nourish Network</h3></a>
-        </div>
-        <ul>
-          <a href="index.html" target="_self"><li>Home</li></a>
-          <a href="Who are we.html" target="_self"><li>Who are we</li></a>
-          <a href="support us.html" target="_self" class="active"><li>Support us</li></a>
-          <a href="Contact.html" target="_self"><li>Contact</li></a>
-          <a href="BuyFromFramers.html" target="_self"><li>Marketplace</li></a>
-        </ul>
-        <a href="DonateFirst.html" class="donate" target="_self">Donate</a>
-      </header>
+      <div id="logo_area">
+        <div id="logo"></div>
+        <a href="index.html" class="title"><h3>Nourish Network</h3></a>
+      </div>
+      <ul>
+        <a href="index.html" target="_self"><li>Home</li></a>
+        <a href="Who are we.html" target="_self"><li>Who are we</li></a>
+        <a href="support us.html" target="_self" class="active"
+          ><li>Support us</li></a
+        >
+        <a href="Contact.html" target="_self"><li>Contact</li></a>
+        <a href="BuyFromFramers.html" target="_self"><li>Marketplace</li></a>
+      </ul>
+      <a href="DonateFirst.html" class="donate" target="_self">Donate</a>
+    </header>
     <main>
-        <h2>SUPPORT  OUR CAUSE</h2>
-        <span class="block">
-            <span>
-                <img src="images/Untitled design (5).png" alt="">
-                <span class="content">
-                    <h4>Volunteer with Us</h4>
-                    <p>
-                        At Nourish Network, we aim to reduce food waste and hunger by connecting events and restaurants with excess food to nearby NGOs. We rely on the support of volunteers to carry out our mission. Join our team and make a difference in your community. Contact us to learn more about volunteer opportunities.
-                    </p>
-                </span>
-            </span>
-            <span>
-                <img src="images/Untitled design.png" alt="">
-                <span class="content">
-                    <h4>Fundraise for Nourish Network</h4>
-                    <p>
-                        As a non-profit organization, we depend on donations to keep our operations running. With your help, we can continue to reduce food waste and distribute food to those in need. Host a fundraising event or start a campaign to support Nourish Network. Contact us to learn more about how you can make a difference.
-                    </p>
-                </span>
-            </span>
-            <a href=""><button>SEE UPCOMING EVENTS</button></a>
+      <h1>SUPPORT OUR CAUSE</h1>
+      <span class="block">
+        <span>
+          <img src="images/Untitled design (5).png" alt="" />
+          <span class="content">
+            <h1>Volunteer with Us</h1>
+            <p>
+              At Nourish Network, we aim to reduce food waste and hunger by
+              connecting events and restaurants with excess food to nearby NGOs.
+              We rely on the support of volunteers to carry out our mission.
+              Join our team and make a difference in your community. Contact us
+              to learn more about volunteer opportunities.
+            </p>
+          </span>
         </span>
-        <h2>WAYS YOU CAN DONATE</h2>
-        <div class="donate_methods">
-            <span>
-                <span class="logo"></span>
-                <h5>Share Location</h5>
-                <p>In a location if you have any extra food during a event or your restaurant have excess food left, Donate them to a nearby NGO using our maps to easily locate them and hand them over.</p>
-            </span>
-            <span>
-                <span class="logo"></span>
-                <h5>Donate Online</h5>
-                <p>
-                    Making a donation online is a quick and easy way to support Nourish Network. Your donation will help us reduce food waste and feed those in need. Click the button below to make a donation now.
-                </p>
-            </span>
-            <span>
-                <span class="logo"></span>
-                <h5>Donate Over the Phone/Email</h5>
-                <p>
-                    If you prefer to donate over the phone, please call us at 1-800-000-0000 or send us an email at donate@nourishnetwork.org and we will respond with further instructions. Thank you for your support.
-                </p>
-            </span>
-            <span>
-                <span class="logo"></span>
-                <h5>Participate in Donation Events</h5>
-                <p>
-                    Multiple NGOs hold multiple seesions of donation among poor households. Join the news letter using the <a href="">subscribe</a> in the footer section to get information on the latest session
-                </p>
-            </span>
-        </div>
-        <a href=""><button>DONATE NOW</button></a>
+        <span>
+          <img src="images/Untitled design.png" alt="" />
+          <span class="content">
+            <h1>Fundraise for Nourish Network</h1>
+            <p>
+              As a non-profit organization, we depend on donations to keep our
+              operations running. With your help, we can continue to reduce food
+              waste and distribute food to those in need. Host a fundraising
+              event or start a campaign to support Nourish Network. Contact us
+              to learn more about how you can make a difference.
+            </p>
+          </span>
+        </span>
+        <a href=""><button>SEE UPCOMING EVENTS</button></a>
+      </span>
+      <h2>WAYS YOU CAN DONATE</h2>
+      <div class="donate_methods">
+        <span>
+          <span class="logo"></span>
+          <h5>Share Location</h5>
+          <p>
+            In a location if you have any extra food during a event or your
+            restaurant have excess food left, Donate them to a nearby NGO using
+            our maps to easily locate them and hand them over.
+          </p>
+        </span>
+        <span>
+          <span class="logo"></span>
+          <h5>Donate Online</h5>
+          <p>
+            Making a donation online is a quick and easy way to support Nourish
+            Network. Your donation will help us reduce food waste and feed those
+            in need. Click the button below to make a donation now.
+          </p>
+        </span>
+        <span>
+          <span class="logo"></span>
+          <h5>Donate Over the Phone/Email</h5>
+          <p>
+            If you prefer to donate over the phone, please call us at
+            1-800-000-0000 or send us an email at donate@nourishnetwork.org and
+            we will respond with further instructions. Thank you for your
+            support.
+          </p>
+        </span>
+        <span>
+          <span class="logo"></span>
+          <h5>Participate in Donation Events</h5>
+          <p>
+            Multiple NGOs hold multiple seesions of donation among poor
+            households. Join the news letter using the
+            <a href="">subscribe</a> in the footer section to get information on
+            the latest session
+          </p>
+        </span>
+      </div>
+      <a href=""><button>DONATE NOW</button></a>
     </main>
     <footer>
-        <div id="grey_footer">
-          <div class="contact">
-            <div id="address">
-              <h4>CONTACT US</h4>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sequi.</div>
-          </div>
-          <div id="socials">
-            <h4>CONNECT WITH US</h4>
-            <ul>
-              <li><a href="">Facebook</a></li>
-              <li><a href="">Instagram</a></li>
-              <li><a href="">Twitter (X)</a></li>
-              <li><a href="">LinkedIn</a></li>
-            </ul>
-          </div>
-          <div id="footer_subscribe">
-            <h1>Subscribe</h1>
-            <p>Join our Newsletter</p>
-            <input type="email" name="email" id="uemail" placeholder="Enter Email here">
-            <button type="submit">Subscribe</button>
-            Thank You for Joining!
+      <div id="grey_footer">
+        <div class="contact">
+          <div id="address">
+            <h4>CONTACT US</h4>
+            Email:-<a href="hackwavenexus@gmail.com">hackwavenexus@gmail.com</a><br>
+            <span>
+              Phone Nos:-<p>1029484849 1000000000 2000000000 3000000000</p>
+            </span>
           </div>
         </div>
-        <h3>Registered Charity Number:0123456789</h3>
-      </footer>
-</body>
+        <div id="socials">
+          <h4>CONNECT WITH US</h4>
+          <ul>
+            <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-x-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div id="footer_subscribe">
+          <h3>Join our Newsletter</h3>
+          <input
+            type="email"
+            name="email"
+            id="uemail"
+            placeholder="Enter Email here"
+          />
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+      <span>
+        <h4>©</h4><h6>2024 HackWave Nexus</h6>
+      </span>
+    </footer>
+  </body>
 </html>
