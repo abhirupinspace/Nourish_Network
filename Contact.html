@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="ContactStyle.css" />
     <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"
@@ -13,6 +12,69 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto:700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+      
+      .heading {
+        font-weight: 900;
+        letter-spacing: 15px;
+        word-spacing: 20px;
+        color: rgb(193, 3, 3);
+      }
+      .description {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        font-size: x-large;
+      }
+      .wixpara {
+        width: 40vw;
+      }
+      main{display: flex;flex-direction: column;align-items: center;justify-content: space-evenly;height: 80vh;}
+      form{
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-evenly;
+      }
+      form span{display: flex;flex-direction: row;align-items: center;height: calc();}
+      form i{width: 40px;}
+      form  span input, form textarea{width: 30vw;height: calc(15vh/4)}
+      .message {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .contact {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 10% 90%;
+      }
+      .msg-btn {
+        border-radius: 10px;
+        padding: 10px;
+        color: aliceblue;
+        background-color: rgb(255, 0, 68);
+      }
+      .msg-btn:hover {
+        background-color:#ffea00;
+        transition: ease-out 0.4s;
+        color: black;
+      }
+      .greetings{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .thank{
+        padding-top: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -29,74 +91,75 @@
       </ul>
       <a href="DonateFirst.html" class="donate" target="_self">Donate</a>
     </header>
-    <h1 class="heading">
-      G&nbsp;e&nbsp;t &nbsp;&nbsp;&nbsp;I&nbsp;n
-      &nbsp;&nbsp;&nbsp;T&nbsp;o&nbsp;u&nbsp;c&nbsp;h
-    </h1>
-    <div class="description">
-      <div class="wixpara">
-        <p>
-          If you have any questions or would like to learn more about our food
-          donation center, please fill out the form below and we'll get back to
-          you as soon as possible.
-        </p>
-        <div class="contact">
-          <i class="fa-solid fa-phone"></i>
-          <p>+91 9433361718</p>
-          <i class="fa-solid fa-location-dot"></i>
+    <main>
+      <h1 class="heading">
+        Get in Touch
+      </h1>
+      <div class="description">
+        <div class="wixpara">
           <p>
-            123 Main Street
-            <br />
-            Anytown, USA 12345
+            If you have any questions regarding our website or on the donations, please fill out the form below and we'll get back to
+            you as soon as possible.
           </p>
-          <i class="fa-solid fa-message"></i>
-          <p>dipansrimany@gmail.com</p>
+          <div class="contact">
+            <i class="fa-solid fa-phone"></i>
+            <p>+91 9433361718</p>
+            <i class="fa-solid fa-location-dot"></i>
+            <p>
+              123 Main Street
+              <br />
+              Anytown, USA 12345
+            </p>
+            <i class="fa-solid fa-message"></i>
+            <p>dipansrimany@gmail.com</p>
+          </div>
         </div>
-      </div>
-      <div class="wixform">
         <form action="#">
-          <table>
-            <tr>
-              <td>
-                <p id="name">Name: <input type="text" class="name" /></p>
-              </td>
-              <td>
-                <p id="email">Email: <input type="email" name="email" /></p>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <p id="sub">
-                  Subject:
-                  <textarea
-                    name="sub"
-                    id="insidecontent"
-                    cols="50"
-                    rows="2"
-                  ></textarea>
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <p id="phone">Phone: <input type="number" name="phone" /></p>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <p class="message">
-                  Message:
-                  <textarea name="massage" cols="30" rows="5"></textarea>
-                </p>
-              </td>
-            </tr>
-          </table>
+        <span><i class="fa-solid fa-user"></i><input type="text" class="name" placeholder="Name"/></span>
+        <span><i class="fa-solid fa-envelope"></i><input type="email" name="email" placeholder="Email"/></span>
+        <span><i class="fa-solid fa-list-check"></i><input id="insidecontent" placeholder="Subject"/></span>
+        <span><i class="fa-solid fa-phone"></i><input type="number" name="phone" placeholder="phone No to contact you"/></span>
+        <span><i class="fa-solid fa-message"></i><textarea name="massage" cols="30" rows="5" placeholder="message for us"></textarea></span>
         </form>
-        <div class="greetings">
-          <button class="msg-btn">Send Message</button>
-          <h5 class="thank">Thank You!</h5>
+      </div>
+      <div class="greetings">
+        <button class="msg-btn">Send Message</button>
+      </div>
+    </main>
+    <footer>
+      <div id="grey_footer">
+        <div class="contact">
+          <div id="address">
+            <h4>CONTACT US</h4>
+            Email:-<a href="hackwavenexus@gmail.com">hackwavenexus@gmail.com</a><br>
+            <span>
+              Phone Nos:-<p>1029484849 1000000000 2000000000 3000000000</p>
+            </span>
+          </div>
+        </div>
+        <div id="socials">
+          <h4>CONNECT WITH US</h4>
+          <ul>
+            <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-x-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div id="footer_subscribe">
+          <h3>Join our Newsletter</h3>
+          <input
+            type="email"
+            name="email"
+            id="uemail"
+            placeholder="Enter Email here"
+          />
+          <button type="submit">Subscribe</button>
         </div>
       </div>
-    </div>
+      <span>
+        <h4>©</h4><h6>2024 HackWave Nexus</h6>
+      </span>
+    </footer>
   </body>
 </html>
