@@ -1,6 +1,6 @@
 :root{
     --colorcode1: black;
-    --colorcode2: wheat;
+    --colorcode2: rgb(255, 255, 255);
 }
 *{
     padding: 0;
@@ -41,10 +41,6 @@ ul{
     align-items: center;
     justify-content: space-evenly;
 }
-li{
-    display: grid;
-    place-items: center;
-}
 header a{
     text-decoration: none;
     font-size: 2.3vmin;
@@ -78,7 +74,6 @@ main .bg{
     width: 100vw;
 }
 main>.abtus{
-    height: 135vh;
     background-color: var(--colorcode2);
 }
 h1{font-size: 5vmin;}
@@ -98,10 +93,10 @@ h6{font-size: 2vmin;}
     background-color: transparent;
     backdrop-filter: brightness(0.6);
 }
-.space p{max-width: 60vw;padding: 2vmax;}
+.space p{max-width: 60vw;padding: 2vmax;text-align: center;}
 #grey_footer{
-    background-color: lightgray;
-    color: var(--colorcode1);
+    background-color: rgb(134, 18, 18);
+    color: var(--colorcode2);
     display: flex;flex-direction: row;
     justify-content: space-evenly;
     padding: 5vh;
@@ -110,21 +105,29 @@ h6{font-size: 2vmin;}
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     width: 25vw;
 }
-#socials>ul{display: flex;flex-direction: column;list-style: none;align-items: 20vw;}
-#grey_footer input{background-color: transparent;border: none;border-bottom: 1px solid var(--colorcode1);}
+#grey_footer input{background-color: transparent;border: none;border: 1px solid var(--colorcode2);height: 30px;border-radius: 20px;}
+#grey_footer input::placeholder{color: white;text-align: center;} 
 #grey_footer button{
-    background-color: transparent;
-    color: var(--colorcode1);
-    border: 1px solid var(--colorcode1);
-    padding: 2px;
+    background-color: white;
+    color: brown;
+    font-weight: 800;
+    border: 1px solid brown;
+    padding: 5px;
+    border-radius: 10px;
 }
-footer h3{
-    background-color: var(--colorcode1);
+footer>span{
+    background-color: rgb(134, 18, 18);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10vh;
-    color: white;
+    height: 5vh;
+    color: var(--colorcode2);
 }
+footer #socials ul{display: grid;grid-template-columns: 50px 50px;grid-template-rows: 50px 50px;}
+footer i{color: white;font-size: 40px;}
+footer a{color: white;text-decoration: none;}
+footer #address span{display: flex;flex-direction: row;}
+footer #address span p{display: flex;flex-direction: column;width: 100px;}
