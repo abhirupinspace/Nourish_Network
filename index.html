@@ -4,22 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nourish Network</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
       .bg.image {
         background-image: url("images/Photo.png");
         border: 2px solid white;
       }
-      .boxes{
-          width: 100vw;
-          display: grid;
-          justify-content: center;
-          backdrop-filter: brightness(0.6);
-          grid-template-columns: 60vw 30vw;
-          grid-template-rows: 25vh 25vh;
-          padding: 1vw;
-          height: 25vh;
+      .boxes {
+        width: 100vw;
+        display: grid;
+        justify-content: center;
+        backdrop-filter: brightness(0.6);
+        grid-template-columns: 60vw 30vw;
+        grid-template-rows: 25vh 25vh;
+        padding: 1vw;
+        height: 25vh;
       }
-      #TA button{
+      main>.abtus{height: 230vh;}
+      #TA button {
         border: 2px white solid;
         background-color: transparent;
         color: white;
@@ -27,38 +31,84 @@
         padding: 5px;
         border-radius: 20px;
       }
-      #subscribe input{background-color: transparent;border: none;border-bottom: 1px solid white;color: white;}
-      #subscribe button{
+      #subscribe input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+      }
+      #subscribe button {
         background-color: white;
         color: rgb(0, 20, 50);
         font-weight: 700;
         padding: 5px;
         border-radius: 20px;
       }
-      .boxes>div{padding: 3vh;display: grid;place-items: center;}
-      #our_mission{background-color:rgb(230, 230, 230);color: rgb(0, 150, 100)}
-      #TA{background-color: brown;color: white;}
-      #ln{background-color: rgb(70, 180, 150);color: white;}
-      #subscribe{background-color: rgb(0, 20, 50);color: white;}
-
-      .upevent{padding-top: 30vh;}
-      .cards{display: flex;flex-direction: row;justify-content: space-evenly;}
-      .upevent h2{display: grid;place-items: center;height: 10vh;}
-      .upevent span{
-        width: 20vw;
-        max-height: 60vh;
-        height: 40vw;
-        display: flex;
-        box-shadow: 0px 0px 2px 1px black;
-        flex-direction: column;
-        align-items: center;
-        background-color: transparent;
-        justify-content: space-evenly;
+      .boxes > div {
+        padding: 3vh;
+        display: grid;
+        place-items: center;
       }
-      .upevent span:hover{box-shadow: 0px 0px 20px 10px black;scale: 1.1;transition: ease-in-out 0.2s;}
-      .upevent button{padding: 1vh;border: 3px solid white;background-color: rgb(0, 20, 50);color: white;border-radius: 20px;}
-      .upevent img{width: 20vw;}
-      #dnhome{
+      #our_mission {
+        background-color: rgb(230, 230, 230);
+        color: rgb(0, 150, 100);
+      }
+      #TA {
+        background-color: brown;
+        color: white;
+      }
+      #ln {
+        background-color: rgb(70, 180, 150);
+        color: white;
+      }
+      #subscribe {
+        background-color: rgb(0, 20, 50);
+        color: white;
+      }
+
+      .upevent {
+        padding-top: 25vh;
+      }
+      .cards {
+        display: flex;
+        flex-direction: column;
+      }
+      .upevent h2 {
+        display: grid;
+        place-items: center;
+        
+        letter-spacing: 10px;
+        word-spacing: 20px;
+        height: 10vh;
+        color: rgb(193, 3, 3);
+        padding-top: 10vh;
+        padding-bottom: 15vh;
+      }
+      .upevent span {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(250,250,200,0.6);
+        box-shadow: 0px 0px 2px 0.5px rgb(0, 0, 0);
+      }
+      .upevent span:nth-child(2n){flex-direction: row-reverse;background-color: transparent;}
+      .upevent button {
+        padding: 2vh;
+        margin-right: 5vh;
+        border: 3px solid white;
+        background-color: rgb(0, 20, 50);
+        color: white;
+        border-radius: 30px;
+      }
+      .upevent img {
+        width: 50vw;
+        height: 50vh;
+        border: 2px solid black;
+      }
+      .upevent .text{padding:10vmin;width: 50vw;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+      #dnhome {
         background-color: red;
         display: flex;
         flex-direction: row;
@@ -68,7 +118,7 @@
         color: white;
         margin: 10vh 0vh;
       }
-      #dnhome button{
+      #dnhome button {
         border: 2px solid white;
         background-color: transparent;
         padding: 2vh;
@@ -76,9 +126,15 @@
         color: white;
         font-weight: 700;
       }
-      #dnhome button:hover{box-shadow: 0px 0px 10px 3px white;font-weight: 900;color: red;border-color: white;transition: ease-in-out 0.5s;background-color: white;}
+      #dnhome button:hover {
+        box-shadow: 0px 0px 10px 3px white;
+        font-weight: 900;
+        color: red;
+        border-color: white;
+        transition: ease-in-out 0.5s;
+        background-color: white;
+      }
     </style>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -87,7 +143,7 @@
         <a href="index.html" class="title"><h3>Nourish Network</h3></a>
       </div>
       <ul>
-        <a href="index.html" target="_self"  class="active"><li>Home</li></a>
+        <a href="index.html" target="_self" class="active"><li>Home</li></a>
         <a href="Who are we.html" target="_self"><li>Who are we</li></a>
         <a href="support us.html" target="_self"><li>Support us</li></a>
         <a href="Contact.html" target="_self"><li>Contact</li></a>
@@ -96,92 +152,126 @@
       <a href="DonateFirst.html" class="donate" target="_self">Donate</a>
     </header>
     <main>
-        <!--Content-->
-        <div class="bg image"></div>
-        <!--Used for background image-->
-        <div class="space">
-            <h1 style="font-family: lemon;">Nourish Network</h1>
-            <h3>End Food Waste!</h3>
-            <p>Every year, millions of pounds of food are wasted and many people go hungry. Nourish Network aims to address this issue by providing a platform for events and restaurants to donate their excess food to NGOs near their location. Help us reduce food waste and feed those in need.</p>
+      <!--Content-->
+      <div class="bg image"></div>
+      <!--Used for background image-->
+      <div class="space">
+        <h1 style="font-family: lemon">Nourish Network</h1>
+        <h2>End Food Waste!</h2>
+        <p>
+          Every year, millions of pounds of food are wasted and many people go
+          hungry. Nourish Network aims to address this issue by providing a
+          platform for events and restaurants to donate their excess food to
+          NGOs near their location. Help us reduce food waste and feed those in
+          need.
+        </p>
+      </div>
+      <div class="boxes">
+        <div id="our_mission">
+          <h3>OUR MISSION</h3>
+          <p>
+            At Nourish Network, our mission is to end food waste and hunger. We
+            believe that by connecting events and restaurants with NGOs, we can
+            help redistribute excess food to those in need. We are dedicated to
+            creating a sustainable and equitable food system for everyone.
+          </p>
+          <a href="#">Learn More</a>
         </div>
-        <div class="boxes">
-          <div id="our_mission">
-            <h3>OUR MISSION</h3>
-            <p>At Nourish Network, our mission is to end food waste and hunger. We believe that by connecting events and restaurants with NGOs, we can help redistribute excess food to those in need. We are dedicated to creating a sustainable and equitable food system for everyone.</p>
-            <a href="#">Learn More</a>
-          </div>
-          <div id="TA">
-            <h4>TAKE ACTION</h4>
-            <a href="support us.html"><button>Support Us</button></a>
-          </div>
-          <div id="ln">
-            <h3>LATEST NEWS</h3>
-            <p>Stay up-to-date with the latest news and events from Nourish Network. Learn about our impact and how you can get involved.</p>
-            <a href="#">Read More</a>
-          </div>
-          <div id="subscribe">
-            <h4>SUBSCRIBE</h4>
-            <p>Join our Newsletter</p>
-            <input type="email" name="email" id="uemail" placeholder="Enter your email here*">
-            <button type="submit">Subscribe</button>
+        <div id="TA">
+          <h4>TAKE ACTION</h4>
+          <a href="support us.html"><button>Support Us</button></a>
+        </div>
+        <div id="ln">
+          <h3>LATEST NEWS</h3>
+          <p>
+            Stay up-to-date with the latest news and events from Nourish
+            Network. Learn about our impact and how you can get involved.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+        <div id="subscribe">
+          <h4>SUBSCRIBE</h4>
+          <p>Join our Newsletter</p>
+          <input
+            type="email"
+            name="email"
+            id="uemail"
+            placeholder="Enter your email here*"
+          />
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+      <div class="abtus">
+        <div class="upevent">
+          <h2>UPCOMING EVENTS</u></h2>
+          <div class="cards">
+            <span>
+              <img src="images/Untitled design (2).png" alt="Event 1" />
+              <div class="text">
+                <h3>FOOD GIVING</h3>
+                <!-- <p>tue</p> -->
+                <button>REGISTER NOW</button>
+              </div>
+            </span>
+            <span>
+              <img src="images/Untitled design (3).png" alt="Event 2" />
+              <div class="text">
+                <h3>FOOD GIVING</h3>
+                <!-- <p>wed</p> -->
+                <button>REGISTER NOW</button>
+              </div>
+            </span>
+            <span>
+              <img src="images/Untitled design (4).png" alt="Event 3" />
+              <div class="text">
+                <h3>FOOD GIVING</h3>
+                <!-- <p>thr</p> -->
+                <button>REGISTER NOW</button>
+              </div>
+            </span>
           </div>
         </div>
-        <div class="abtus">
-          <div class="upevent">
-            <h2>UPCOMING EVENTS</h2>
-            <div class="cards">
-              <span>
-                <img src="images/Untitled design (2).png" alt="Event 1">
-                <h3>FOOD GIVING</h3>
-                <p>tue</p>
-                <button>REGISTER NOW</button>
-              </span>
-              <span>
-                <img src="images/Untitled design (3).png" alt="Event 2">
-                <h3>FOOD GIVING</h3>
-                <p>wed</p>
-                <button>REGISTER NOW</button>
-              </span>
-              <span>
-                <img src="images/Untitled design (4).png" alt="Event 3">
-                <h3>FOOD GIVING</h3>
-                <p>thr</p>
-                <button>REGISTER NOW</button>
-              </span>
-            </div>
-          </div>
-          <br>
-          <div id="dnhome">
-            <h2>DONATE NOW</h2>
-            <a href="Donate.html"><button>Donate Today</button></a>
-          </div>
+        <br />
+        <div id="dnhome">
+          <h2>DONATE NOW</h2>
+          <a href="Donate.html"><button>Donate Today</button></a>
         </div>
+      </div>
     </main>
     <footer>
       <div id="grey_footer">
         <div class="contact">
           <div id="address">
             <h4>CONTACT US</h4>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sequi.</div>
+            Email:-<a href="hackwavenexus@gmail.com">hackwavenexus@gmail.com</a><br>
+            <span>
+              Phone Nos:-<p>1029484849 1000000000 2000000000 3000000000</p>
+            </span>
+          </div>
         </div>
         <div id="socials">
           <h4>CONNECT WITH US</h4>
           <ul>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Twitter (X)</a></li>
-            <li><a href="">LinkedIn</a></li>
+            <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-x-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
           </ul>
         </div>
         <div id="footer_subscribe">
-          <h1>Subscribe</h1>
-          <p>Join our Newsletter</p>
-          <input type="email" name="email" id="uemail" placeholder="Enter Email here">
+          <h3>Join our Newsletter</h3>
+          <input
+            type="email"
+            name="email"
+            id="uemail"
+            placeholder="Enter Email here"
+          />
           <button type="submit">Subscribe</button>
-          Thank You for Joining!
         </div>
       </div>
-      <h3>Registered Charity Number:0123456789</h3>
+      <span>
+        <h4>©</h4><h6>2024 HackWave Nexus</h6>
+      </span>
     </footer>
   </body>
 </html>
