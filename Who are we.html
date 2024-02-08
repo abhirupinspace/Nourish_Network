@@ -4,8 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="aboutusstyle.css" />
+    <style>
+      .heading{
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content{
+        height: 15vh;
+        padding: 0vh 40vh;
+      }
+      img{
+        padding: 0vh 40vh;
+        height: 600px;
+      }
+      main p{text-align: center;font-size: 20px;}
+      main button{margin: 20px 43vw;background-color: brown;padding: 15px;border-radius: 30px;color: white;font-weight: 700;}
+    </style>
   </head>
   <body>
     <header>
@@ -22,14 +40,51 @@
       </ul>
       <a href="DonateFirst.html" class="donate" target="_self">Donate</a>
     </header>
-    <h1 class="heading">About Nourish Network</h1>
-    <p class="content">
-      Nourish Network is a food donation website that connects events and
-      restaurants with excess food to nearby NGOs in need. Our mission is to
-      reduce food waste and fight hunger in our communities. With your support,
-      we can make a difference in the lives of those who are food insecure.
-    </p>
-    <img class="aboutimage" src="close-up-people-holding-apples-bag.jpg" alt="">
-    <a href=""><button>Support Our Cause</button></a>
+    <main>
+      <h1 class="heading">About Nourish Network</h1>
+      <p class="content">
+        Nourish Network is a food donation website that connects events and
+        restaurants with excess food to nearby NGOs in need. Our mission is to
+        reduce food waste and fight hunger in our communities. With your support,
+        we can make a difference in the lives of those who are food insecure.
+      </p>
+      <img src="images/close-up-people-holding-apples-bag.jpg" alt="">
+      <a href=""><button>Support Our Cause</button></a>
+    </main>
+    <footer>
+      <div id="grey_footer">
+        <div class="contact">
+          <div id="address">
+            <h4>CONTACT US</h4>
+            Email:-<a href="hackwavenexus@gmail.com">hackwavenexus@gmail.com</a><br>
+            <span>
+              Phone Nos:-<p>1029484849 1000000000 2000000000 3000000000</p>
+            </span>
+          </div>
+        </div>
+        <div id="socials">
+          <h4>CONNECT WITH US</h4>
+          <ul>
+            <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-square-x-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div id="footer_subscribe">
+          <h3>Join our Newsletter</h3>
+          <input
+            type="email"
+            name="email"
+            id="uemail"
+            placeholder="Enter Email here"
+          />
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+      <span>
+        <h4>©</h4><h6>2024 HackWave Nexus</h6>
+      </span>
+    </footer>
   </body>
 </html>
