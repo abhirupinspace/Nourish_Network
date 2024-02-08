@@ -33,8 +33,14 @@ function renderVegetables() {
         vegetableCard.innerHTML = `
             <img src="${vegetable.img}">
             <h2>${vegetable.name}</h2>
+            <span>
+            Count:
+            <button class="- cnt" onclick="decrease(${vegetable.id})">-</button>
+            <span class="count">0</span>
+            <button class="+ cnt" onclick="increase(${vegetable.id})">+</button>
+            </span>
             <p>Price: $${vegetable.price.toFixed(2)}</p>
-            <button onclick="addToCart(${vegetable.id})">Buy Now</button>
+            <button class="submit" onclick="addToCart(${vegetable.id})">Buy Now</button>
         `;
         vegetableList.appendChild(vegetableCard);
     });
@@ -46,22 +52,46 @@ function addToCart(vegetableId) {
     updateCart();
 }
 
+function increase(vegId){
+    var count=document.getElementsByClassName("count")[parseInt(vegId)-1];
+    count.innerHTML=(parseInt(count.innerHTML)+1);
+}
+
+function decrease(vegId){
+    var count=document.getElementsByClassName("count")[parseInt(vegId)-1];
+    if(parseInt(count.innerHTML)>0)
+    count.innerHTML=(parseInt(count.innerHTML)-1);
+    else
+    alert("item cant be less than 0");
+}
+
 function updateCart() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
 
     cartItems.innerHTML = '';
     let total = 0;
-
+    /*Problem Statements:
+        1.How to add the count of item when the button is selected
+        2.How to multiply with the price
+        3.
+    */
     cart.forEach((item) => {
         const cartItem = document.createElement('li');
         cartItem.classList.add('cart-item');
-        cartItem.innerHTML = `
-            <span>${item.name}</span>
-            <span>$${item.price.toFixed(2)}</span>
-        `;
-        cartItems.appendChild(cartItem);
-        total += item.price;
+        const count=document.getElementsByClassName("count")[parseInt(item.id)-1];
+        if(count!=0){
+            cartItem.innerHTML = `
+                <span>
+                    <span>${item.name} X ${count.innerHTML}</span>
+                    <span>$${item.price.toFixed(2)*parseInt(count.innerHTML)}</span>
+                </span>
+            `;
+            cartItems.appendChild(cartItem);
+            total += (item.price)*2;
+        }
+        else
+        alert("cant add item with 0 count");
     });
 
     cartTotal.textContent = total.toFixed(2);
